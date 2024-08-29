@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FaBookmark } from 'react-icons/fa'
 
 const ProfilePage = () => {
-    // Example profiles data
+    // profiles data
     const profiles = [
         {
             name: "Annisa",
@@ -100,13 +100,13 @@ const ProfilePage = () => {
         },
     ];
 
-    // State to track how many profiles to show initially
+    
     const [showMoreProfiles, setShowMoreProfiles] = useState(false);
 
-    // State to track which profiles' articles are expanded
+    
     const [expandedProfiles, setExpandedProfiles] = useState({});
 
-    // Determine profiles to display based on the showMoreProfiles state
+    
     const profilesToShow = showMoreProfiles ? profiles : profiles.slice(0, 2);
 
     const toggleShowMoreArticles = (index) => {
